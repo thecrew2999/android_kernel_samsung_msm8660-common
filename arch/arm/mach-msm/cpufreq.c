@@ -367,6 +367,7 @@ static int __cpuinit msm_cpufreq_init(struct cpufreq_policy *policy)
 	if (cpuinitcount < NUM_CORES) {
 		policy->min = CONFIG_MSM_CPU_FREQ_MIN;
 		policy->max = CONFIG_MSM_CPU_FREQ_MAX;
+	}
 #endif
 
 	cur_freq = acpuclk_get_rate(policy->cpu);
@@ -390,7 +391,7 @@ static int __cpuinit msm_cpufreq_init(struct cpufreq_policy *policy)
 				SETRATE_CPUFREQ);
 		if (ret)
 			return ret;
-			#ifdef CONFIG_MSM_CPU_FREQ_SET_MIN_MAX
+#ifdef CONFIG_MSM_CPU_FREQ_SET_MIN_MAX
 		pr_info("cpufreq: cpu%d init at %d switching to %d - init # %d\n",
 				policy->cpu, cur_freq, table[index].frequency, cpuinitcount);
 #else
