@@ -411,9 +411,7 @@ CONFIG_MSM_RMT_STORAGE_CLIENT=y
 CONFIG_MSM_SDIO_SMEM=y
 CONFIG_MSM_DALRPC=y
 CONFIG_MSM_DALRPC_TEST=m
-<<<<<<< HEAD:arch/arm/configs/cyanogenmod_quincytmo_defconfig
 # CONFIG_MSM_CPU_FREQ_SET_MIN_MAX is not set
-=======
 CONFIG_MSM_KGSL_GPU_CLOCK=y
 CONFIG_MSM_KGSL_GPU_CLOCK_DEFAULT=y
 # CONFIG_MSM_KGSL_GPU_CLOCK_MODERATE is not set
@@ -421,7 +419,6 @@ CONFIG_MSM_KGSL_GPU_CLOCK_DEFAULT=y
 CONFIG_MSM_CPU_FREQ_SET_MIN_MAX=y
 CONFIG_MSM_CPU_FREQ_MAX=1566000
 CONFIG_MSM_CPU_FREQ_MIN=192000
->>>>>>> a31287d... GPU overclock support:arch/arm/configs/h0tsauce_defconfig
 # CONFIG_MSM_AVS_HW is not set
 # CONFIG_MSM_HW3D is not set
 CONFIG_AMSS_7X25_VERSION_2009=y
@@ -2960,14 +2957,11 @@ CONFIG_ANDROID_LOW_MEMORY_KILLER=y
 # CONFIG_VT6656 is not set
 # CONFIG_IIO is not set
 CONFIG_XVMALLOC=y
-<<<<<<< HEAD:arch/arm/configs/cyanogenmod_quincytmo_defconfig
 # CONFIG_ZRAM is not set
 CONFIG_ZCACHE=y
 # CONFIG_QCACHE is not set
-=======
 CONFIG_ZRAM=y
 # CONFIG_ZRAM_DEBUG is not set
->>>>>>> a31287d... GPU overclock support:arch/arm/configs/h0tsauce_defconfig
 # CONFIG_FB_SM7XX is not set
 # CONFIG_LIRC_STAGING is not set
 # CONFIG_EASYCAP is not set
