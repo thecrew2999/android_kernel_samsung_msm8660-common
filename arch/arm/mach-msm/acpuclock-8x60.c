@@ -261,29 +261,7 @@ static struct clkctl_acpu_speed acpu_freq_tbl_1512mhz_slow[] = {
 };
 
 /* SCPLL frequencies = 2 * 27 MHz * L_VAL */
-static struct clkctl_acpu_speed acpu_freq_tbl_slow[] = {
-  { {1, 1},  192000,  ACPU_PLL_8, 3, 1, 0, 0,    L2(1),   800000, 0x03006000},
-  /* MAX_AXI row is used to source CPU cores and L2 from the AFAB clock. */
-  { {0, 0},  MAX_AXI, ACPU_AFAB,  1, 0, 0, 0,    L2(0),   825000, 0x03006000},
-  { {1, 1},  384000,  ACPU_PLL_8, 3, 0, 0, 0,    L2(1),   825000, 0x03006000},
-  { {1, 1},  540000,  ACPU_SCPLL, 0, 0, 1, 0x0A, L2(3),   875000, 0x03006000},
-  { {1, 1},  702000,  ACPU_SCPLL, 0, 0, 1, 0x0D, L2(6),   900000, 0x03006000},
-  { {1, 1},  864000,  ACPU_SCPLL, 0, 0, 1, 0x10, L2(9),   975000, 0x03006000},
-  { {1, 1}, 1026000,  ACPU_SCPLL, 0, 0, 1, 0x13, L2(12), 1025000, 0x03006000},
-  { {1, 1}, 1188000,  ACPU_SCPLL, 0, 0, 1, 0x16, L2(15), 1100000, 0x03006000},
-  { {1, 1}, 1350000,  ACPU_SCPLL, 0, 0, 1, 0x19, L2(18), 1150000, 0x03006000},
-  { {1, 1}, 1512000,  ACPU_SCPLL, 0, 0, 1, 0x1C, L2(19), 1200000, 0x03006000},
-  { {1, 1}, 1566000,  ACPU_SCPLL, 0, 0, 1, 0x1D, L2(19), 1225000, 0x03006000},
-  { {1, 1}, 1620000,  ACPU_SCPLL, 0, 0, 1, 0x1E, L2(20), 1225000, 0x03006000},
-  { {1, 1}, 1674000,  ACPU_SCPLL, 0, 0, 1, 0x1F, L2(20), 1250000, 0x03006000},
-  { {1, 1}, 1728000,  ACPU_SCPLL, 0, 0, 1, 0x20, L2(20), 1275000, 0x03006000},
-  { {1, 1}, 1782000,  ACPU_SCPLL, 0, 0, 1, 0x21, L2(20), 1300000, 0x03006000},
-  { {1, 1}, 1836000,  ACPU_SCPLL, 0, 0, 1, 0x22, L2(20), 1300000, 0x03006000},
-  { {0, 0}, 0 },
-};
-
-/* SCPLL frequencies = 2 * 27 MHz * L_VAL */
-static struct clkctl_acpu_speed acpu_freq_tbl_nom[] = {
+static struct clkctl_acpu_speed acpu_freq_tbl_1512mhz_nom[] = {
   { {1, 1},  192000,  ACPU_PLL_8, 3, 1, 0, 0,    L2(1),   800000, 0x03006000},
   /* MAX_AXI row is used to source CPU cores and L2 from the AFAB clock. */
   { {0, 0},  MAX_AXI, ACPU_AFAB,  1, 0, 0, 0,    L2(0),   825000, 0x03006000},
