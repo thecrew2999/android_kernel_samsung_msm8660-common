@@ -314,11 +314,12 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
 	  'allow_bypass' - This driver adds a bypass to the phases
 
 config CPU_FREQ_GOV_SMARTASS2
-	tristate "'smartassV2' cpufreq governor"
+	tristate "'smartass2' cpufreq governor"
 	depends on CPU_FREQ
 	help
-		'smartassV2' - a "smart" governor
-		If in doubt, say N.
+  	  smartass2' - a "slightly more agressive smart" optimized governor!
+
+	  If in doubt, say Y.
 
 config SEC_DVFS
 	bool "DVFS job"
