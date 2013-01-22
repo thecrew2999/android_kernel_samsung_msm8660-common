@@ -119,11 +119,9 @@ config CPU_FREQ_DEFAULT_GOV_WHEATLEY
 	help
 	  Use the CPUFreq governor 'wheatley' as default.
 
-config CPU_FREQ_DEFAULT_GOV_SMARTASS2
-  bool "smartass2"
-  select CPU_FREQ_GOV_SMARTASS2
-  help
-    Use the CPUFreq governor 'smartassV2' as default.
+config CPU_FREQ_DEFAULT_GOV_LULZACTIVE
+	bool "lulzactive"
+    select CPU_FREQ_GOV_LULZACTIVE
 
 config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	bool "interactive"
@@ -313,13 +311,13 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
 	help
 	  'allow_bypass' - This driver adds a bypass to the phases
 
-config CPU_FREQ_GOV_SMARTASS2
-	tristate "'smartass2' cpufreq governor"
+config CPU_FREQ_GOV_LULZACTIVE
+	tristate "'lulzactive' cpufreq governor"
 	depends on CPU_FREQ
 	help
-  	  smartass2' - a "slightly more agressive smart" optimized governor!
+	  'lulzactive' - a new interactive governor by Tegrak!
 
-	  If in doubt, say Y.
+	  If in doubt, say N.
 
 config SEC_DVFS
 	bool "DVFS job"
