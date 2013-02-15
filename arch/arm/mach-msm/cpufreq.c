@@ -61,8 +61,8 @@ static DEFINE_PER_CPU(struct cpufreq_suspend_t, cpufreq_suspend);
 
 static int override_cpu;
 #ifdef CONFIG_SEC_DVFS
-static unsigned int upper_limit_freq = 0;
-static unsigned int lower_limit_freq = 0;
+static unsigned int upper_limit_freq = 1;
+static unsigned int lower_limit_freq = 1;
 
 unsigned int get_min_lock(void)
 {
