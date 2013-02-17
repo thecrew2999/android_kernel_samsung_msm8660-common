@@ -366,6 +366,7 @@ struct mdp4_overlay_pipe {
 	uint32 blt_ov_done;
 	uint32 blt_dmap_koff;
 	uint32 blt_dmap_done;
+	uint32 blt_forced;
 	uint32 req_clk;
 	uint32 req_bw;
 	uint32 luma_align_size;
@@ -610,7 +611,7 @@ void mdp4_overlay_dmap_cfg(struct msm_fb_data_type *mfd, int lcdc);
 void mdp4_overlay_dmap_xy(struct mdp4_overlay_pipe *pipe);
 void mdp4_overlay_dmae_cfg(struct msm_fb_data_type *mfd, int atv);
 void mdp4_overlay_dmae_xy(struct mdp4_overlay_pipe *pipe);
-int mdp4_overlay_pipe_staged(int mixer);
+int mdp4_overlay_pipe_staged(struct mdp4_overlay_pipe *pipe);
 void mdp4_lcdc_primary_vsyn(void);
 void mdp4_overlay0_done_lcdc(int cndx);
 void mdp4_overlay0_done_mddi(int cndx);
@@ -984,9 +985,6 @@ int mdp4_overlay_mdp_pipe_req(struct mdp4_overlay_pipe *pipe,
 int mdp4_overlay_mdp_perf_req(struct msm_fb_data_type *mfd,
 			      struct mdp4_overlay_pipe *plist);
 void mdp4_overlay_mdp_perf_upd(struct msm_fb_data_type *mfd, int flag);
-int mdp4_update_base_blend(struct msm_fb_data_type *mfd,
-				struct mdp_blend_cfg *mdp_blend_cfg);
-u32 mdp4_get_mixer_num(u32 panel_type);
 int mdp4_overlay_reset(void);
 
 #ifndef CONFIG_FB_MSM_WRITEBACK_MSM_PANEL
