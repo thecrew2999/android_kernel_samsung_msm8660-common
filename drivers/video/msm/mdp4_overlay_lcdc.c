@@ -580,6 +580,7 @@ int mdp4_lcdc_on(struct platform_device *pdev)
 
 	mdp4_overlay_reg_flush(pipe, 1);
 	mdp4_mixer_stage_up(pipe, 0);
+	mdp4_mixer_stage_commit(pipe->mixer_num);
 
 
 	/*
@@ -891,6 +892,9 @@ void mdp4_overlay0_done_lcdc(int cndx)
 		spin_unlock(&vctrl->spin_lock);
 		return;
 	}
+
+	if (mdp_rev <= MDP_REV_41)
+		mdp4_mixer_blend_cfg(MDP4_MIXER0);
 
 	mdp4_lcdc_blt_dmap_update(pipe);
 	pipe->dmap_cnt++;
